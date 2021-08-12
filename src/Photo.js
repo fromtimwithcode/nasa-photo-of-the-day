@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function APOTD(props) {
+export default function Photo(props) {
     const { potd } = props;
     return (
         <div className="imgContainer">

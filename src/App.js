@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { BASE_URL, API_KEY } from './constants/index';
 import "./App.css";
-import APOTD from './APOTD';
+import Photo from './Photo';
+import Header from './Header';
+import Explanation from './Explanation';
 
 function App() {
   const [data, setData] = useState([]);
@@ -22,7 +24,9 @@ function App() {
   return (
     <div className='App'>
       { error && <h1>{error}</h1> }
-      <APOTD potd={potd}/>
+      <Header copyright={data.copyright} date={data.date} title={data.title} />
+      <Photo potd={potd}/>
+      <Explanation explanation={data.explanation} />
     </div>
   );
 }
