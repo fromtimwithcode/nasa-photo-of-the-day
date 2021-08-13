@@ -24,7 +24,7 @@ function App() {
       }).catch(err => {
         setError(`Please try again later.`)
       })
-  })
+  }, [])
 
   const dateSelect = input => {
     axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${input}`)
