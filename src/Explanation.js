@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+    margin: auto;
+    width: 75%;
+    text-align: center;
+`
 
 function Explanation(props) {
     const { explanation } = props;
     return (
-        <div className='descriptionContainer'>
+        <StyledDiv>
             <p>{explanation}</p>
-        </div>
+        </StyledDiv>
     )
 }
 
